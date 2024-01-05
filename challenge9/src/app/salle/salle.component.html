@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+<h3>
+    Vous avez sélectionné la salle avec l'id = {{salleId}}
+ </h3>
+ <p>Les informations de cette salle sont : </p>
+ <table class="table table-hover table-striped table-bordered">
+    <thead>
+      <tr>
+        <th style="text-align:center;">Id</th>
+        <th style="text-align:center;">Nom</th>
+        <th style="text-align:center;">Capacite</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+      <tr >
+        <td style="text-align:center;">{{ salles.id}}</td>
+        <td style="text-align:center;">{{ salles.nom }}</td>
+        <td style="text-align:center;">{{ salles.capacite }}</td>
+     </tr>
+    </tbody>
+  </table>
+ 
+
+

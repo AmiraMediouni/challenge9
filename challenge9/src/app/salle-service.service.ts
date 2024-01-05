@@ -15,8 +15,8 @@ export class SalleServiceService {
     return this.http.get<Salle[]>(this.salleUrl)
                     
   }
-  getOne(uid:number):Observable<Salle[]>{
+ /* getOne(uid:number):Observable<Salle[]>{
     return this.http.get<Salle[]>(this.salleUrl+'/'+uid)
                     
-  }
+  }*/
 }

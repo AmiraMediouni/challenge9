@@ -11,15 +11,25 @@ export class SalleComponent implements OnInit{
 
   public salleId:any
   public salles:any=[]
+  public salle:any
     
   constructor(private route:ActivatedRoute,private router:Router ,private _salleService:SalleServiceService){  }
   ngOnInit(){
-      let id=parseInt((this.route.snapshot.paramMap.get('id')!))
+     /* let id=parseInt((this.route.snapshot.paramMap.get('id')!))
       this.salleId=id
       this._salleService.getOne(this.salleId)
       .subscribe(
-        data => this.salles=data
-        )    
+        data => {this.salles=data
+        }
+        )*/
+        let id=parseInt((this.route.snapshot.paramMap.get('id')!))
+        this.salleId=id
+        this._salleService.getAll()
+        .subscribe(
+          data =>{ this.salles=data
+          this.salle=data[this.salleId-1] 
+          }
+          )    
     
   }
  
